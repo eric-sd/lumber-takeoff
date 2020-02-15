@@ -14,9 +14,9 @@ def convertToInches(feet):
 
 
 def figureOutStuds(wallWidth, studSpacing):
-    numberOfStuds = convertToInches(wallWidth) / int(studSpacing)
-    numberOfStuds = numberOfStuds + 2  # add two more studs for the connections
-    return math.ceil(numberOfStuds)
+    numberOfStuds = convertToInches(wallWidth) / int(studSpacing) # convert wall width to inches and divide by stud spacing
+    numberOfStuds = numberOfStuds + 2  # add two more studs for the corners
+    return math.ceil(numberOfStuds) # Round the number up
 
 
 totalStuds = 0
