@@ -21,18 +21,18 @@ def figureOutStuds(wallWidth, studSpacing):
 
 totalStuds = 0
 
-for wall in walls:
-    print(wall + " Width = " + config[wall]["width"])
-    print(wall + " Width Inches = " + str(convertToInches(config[wall]["width"])))
-    print(wall + " Stud Spacing Inches = " + str(config[wall]["studSpacing"]))
-    print(
-        wall
-        + " Studs Required = "
-        + str(figureOutStuds(config[wall]["width"], config[wall]["studSpacing"]))
-    )
-    totalStuds = totalStuds + figureOutStuds(
-        config[wall]["width"], config[wall]["studSpacing"]
-    )
-    print("")
-
-print("Totals Studs Required = " + str(totalStuds))
+#for wall in walls:
+#    print(wall + " Width = " + config[wall]["width"])
+#    print(wall + " Width Inches = " + str(convertToInches(config[wall]["width"])))
+#    print(wall + " Stud Spacing Inches = " + str(config[wall]["studSpacing"]))
+#    print(
+#        wall
+#        + " Studs Required = "
+#        + str(figureOutStuds(config[wall]["width"], config[wall]["studSpacing"]))
+#    )
+#    totalStuds = totalStuds + figureOutStuds(
+#        config[wall]["width"], config[wall]["studSpacing"]
+#    )
+#    print("")
+#
+#print("Totals Studs Required = " + str(totalStuds))
