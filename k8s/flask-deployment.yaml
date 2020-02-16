@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: flask
-        image: ericvim/lumber-takeoff:v2.3
+        image: ericvim/lumber-takeoff:v2.4
         ports:
         - containerPort: 5000
