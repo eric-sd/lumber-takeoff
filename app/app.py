@@ -19,8 +19,15 @@ def lumber():
 def result():
    if request.method == 'POST':
       result = request.form
-      totalStuds = figureOutStuds(result['width'],result['studSpacing'])
-      newResult = {'Wall Width' : result['width'], 'Stud Spacing' : result['studSpacing'], 'Total Studs' : totalStuds}
+      totalStuds = 0
+      newResult = {}
+      newResult['Stud Spacing'] = result['studSpacing']
+      for fieldname, value in result.items():
+          if 'Width' in fieldname:
+              totalStuds = totalStuds + figureOutStuds(result[fieldname],result['studSpacing'])
+              newResult[fieldname] = value
+
+      newResult['Total Studs Needed'] = totalStuds
       return render_template("result.html",result = newResult)
 
 if __name__ == "__main__":
