@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-dep
+  labels:
+    app: flask-lumberTakeoff
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-lumberTakeoff
+  template:
+    metadata:
+      labels:
+        app: flask-lumberTakeoff
+    spec:
+      containers:
+      - name: flask
+        image: digitalocean/flask-lumberTakeoff:latest
+        ports:
+        - containerPort: 5000
