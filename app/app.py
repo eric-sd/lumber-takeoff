@@ -15,6 +15,7 @@ def result():
       newResult = {'Wall Width' : result['width'], 'Stud Spacing' : result['studSpacing'], 'Total Studs' : totalStuds}
       return render_template("result.html",result = newResult)
 
-port = int(os.environ.get("PORT", 5000))
-app.run(debug=True,host='0.0.0.0',port=port)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0',port=port)
 
