@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: flask
-        image: digitalocean/flask-lumberTakeoff:latest
+        image: ericvim/misc-side-projects:latest
         ports:
         - containerPort: 5000
