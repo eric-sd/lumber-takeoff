@@ -1,9 +1,19 @@
 <html>
+  <head>
+    <title> Lumber Take Off Report </title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+  Lumber TakeOff Report <br>
+  Version {{ version }}
    <body>
-     Lumber TakeOff <br> Version 2.4 <br>
       <form action = "{{ url_for('result') }}" method = "POST">
-         <p>Width<input type = "text" name = "width" /></p>
-         <p>Stud Spacing<input type = "text" name = "studSpacing" /></p>
+         <p>Stud Spacing  <input type = "text" name = "studSpacing" value=16 /></p>
+         <p>Wall 1 Width  <input type = "text" name = "Wall 1 Width" value=0 /></p>
+         <p>Wall 2 Width  <input type = "text" name = "Wall 2 Width" value=0 /></p>
+         <p>Wall 3 Width  <input type = "text" name = "Wall 3 Width" value=0 /></p>
+         <p>Wall 4 Width  <input type = "text" name = "Wall 4 Width" value=0 /></p>
          <p><input type = "submit" value = "submit" /></p>
       </form>
    </body>

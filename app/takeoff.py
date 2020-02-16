@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
 import math
-import configparser
+#import configparser
 
-config = configparser.ConfigParser()
-config.read("lumber.ini")
-walls = config.sections()
+#config = configparser.ConfigParser()
+#config.read("lumber.ini")
+#walls = config.sections()
 
 
 def convertToInches(feet):
