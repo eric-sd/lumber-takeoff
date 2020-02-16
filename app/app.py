@@ -1,11 +1,19 @@
 import os
 from flask import Flask, render_template, request
 from takeoff import convertToInches, figureOutStuds
+import configparser
+
+config = configparser.ConfigParser()
+config.read("takeOff.ini")
+
+
+version = config["metadata"]["version"]
+
 app = Flask(__name__)
 
 @app.route('/')
 def lumber():
-   return render_template('lumber.html')
+   return render_template('lumber.html', version = version)
 
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
