@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: flask
-    image: ericvim/lumber-takeoff:v2.0.2
+    image: ericvim/lumber-takeoff:v2.0.4
     ports:
     - containerPort: 5000
