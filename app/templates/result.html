@@ -1,22 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title> Lumber Take Off Report Results </title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-  </head>
-   <body>
-      <table border = 1>
-         {% for key, value in result.items() %}
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-         {% endfor %}
-      </table>
+<head>
+  <title> Lumber TakeOff Results </title>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-      <br>
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+         {% for key, value in result.items() %}
+	 <tr> <td> {{ key }} </td> <td>   {{ value }} </td> </tr>
+         {% endfor %}
+</table>
+
       <a  href={{ url_for('lumber') }}> Run Again </a>
-   </body>
+</body>
 </html>
+
