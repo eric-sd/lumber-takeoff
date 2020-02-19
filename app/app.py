@@ -25,7 +25,7 @@ def result():
       newResult['Stud Spacing'] = str(result['studSpacing']) + " inches "
       for fieldname, value in result.items():
           if value:
-              if 'Width' in fieldname and int(value) > 0:
+              if 'width' in fieldname.casefold() and int(value) > 0:
                   totalStuds = totalStuds + figureOutStuds(result[fieldname],result['studSpacing'])
                   newResult[fieldname] = str(value) + " feet"
 
